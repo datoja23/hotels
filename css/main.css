@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+
+* {
+  font-family: "Nunito", sans-serif;
+}
+
+h1 {
+  font-family: "Satisfy", cursive;
+  margin-bottom: 16px;
+  font-size: 5rem;
+}
+
+h1,
+h2,
+h3,
+p {
+  color: white;
+}
+.title_header {
+  margin-top: 10%;
+}
+
+body {
+  display: block;
+  background-image: url("../assets/pexels-juris-freidenfelds-2013672.jpg");
+  background-size: cover; /* Ajusta la imagen para cubrir el fondo */
+  background-repeat: no-repeat;
+  background-position: center top;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+header {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.filter_container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  opacity: 0.8;
+}
+
+.filter_container select,
+.filter_container input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.filter_container button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.FoundMessage__Title {
+  font-family: "Satisfy", cursive;
+  font-size: 2rem; /* Tamaño similar al de un h2 */
+}
