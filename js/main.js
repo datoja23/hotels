@@ -105,5 +105,5 @@ gitdocument.addEventListener('DOMContentLoaded', function () {
         updateDynamicMessage();
     }
 
-    //   eventos
+    //   eventos temporales
 });
