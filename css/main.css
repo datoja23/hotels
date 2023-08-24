@@ -26,7 +26,9 @@ body {
   background-image: url("../assets/pexels-juris-freidenfelds-2013672.jpg");
   background-size: cover; /* Ajusta la imagen para cubrir el fondo */
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: top;
+  max-height: 350px;
+  max-width: 100%;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -66,3 +68,106 @@ header {
   font-family: "Satisfy", cursive;
   font-size: 2rem; /* Tamaño similar al de un h2 */
 }
+
+.container {
+  margin-top: 5%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.hotel-card {
+  border-radius: 25px;
+  padding: 10px;
+  width: 400px;
+  height: 300px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  display: flex; /* Cambiamos a flexbox */
+  flex-direction: column; /* Columnas apiladas */
+  justify-content: space-between; /*Espacio entre columnas*/
+  background-size: cover;
+}
+
+.hotel-card::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.hotel-info {
+  top: 50%;
+  left: 50%;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  border-radius: 15px;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.hotel-card .hotel-info {
+  height: 100%;
+  width: 100.5%;
+  margin-left: -3%;
+  /* margin-right: -10%; */
+  margin-bottom: -5%;
+}
+.hotel-card:hover .hotel-info {
+  text-align: right;
+  opacity: 1;
+  height: 120%;
+  margin-bottom: -68%;
+  transform: translateY(-82%);
+  transition: transform 0.6s ease;
+}
+.hotel-name {
+  font-size: 25px;
+}
+.hotel-name,
+.hotel-Country,
+.hotel-Details,
+.hotel-description {
+  position: relative;
+  z-index: 1;
+  font-weight: bold;
+  color: white;
+  padding: 5px; /*espacio entre filas*/
+  margin-right: 10px;
+}
+
+.book-button {
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  position: absolute;
+  right: 1%;
+}
+.hotel-card:hover .book-button {
+  margin-top: 45%;
+  /* margin-top: 160px; */
+}
+
+.hotel-description {
+  display: none; /* Ocultar la descripción inicialmente */
+}
+
+.hotel-card:hover .hotel-description {
+  display: block; /* Mostrar la descripción cuando se activa el hover */
+  color: white;
+  text-align: justify;
+}
+
