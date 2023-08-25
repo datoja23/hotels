@@ -4,7 +4,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Book Your Hotel</title>
+    <title>Book You Hotel</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='/css/main.css'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
@@ -26,16 +26,15 @@
                 </select>
             </form>
             <form class="date-start">
-                <!-- <label for="start">Start Date:</label> -->
-                <input type="text" id="start" name="start" class="datepicker" value="dd/mm/aaaa">
+                <input type="text" id="startDate" class="datepicker" data-input>
             </form>
             <form class="date-end">
-                <!-- <label for="end">End Date:</label> -->
-                <input type="text" id="end" name="end" class="datepicker" value="dd/mm/aaaa">
+                <input type="text" id="endDate" class="datepicker" data-input data-range-input>
             </form>
+
             <form class="price">
                 <select name="price" id="price">
-                    <option value="All Price">--All Price--</option>
+                    <option value="All Prices">--All Price--</option>
                     <option value="1">$</option>
                     <option value="2">$$</option>
                     <option value="3">$$$</option>
@@ -44,26 +43,22 @@
             </form>
             <form class="size">
                 <select name="size" id="size">
-                    <option value="All Size">--All Size--</option>
+                    <option value="All Sizes">--All Size--</option>
                     <option value="Small">Small</option>
                     <option value="Medium">Medium</option>
                     <option value="Large">Large</option>
                 </select>
             </form>
-            <button type="button" onclick="clear()">Clear</button>
+            <button type="button">Clear</button>
         </div>
-        <!-- <h2>We have found for you...</h2> -->
-        <!-- <h3>All sizes hotels of all category prices, in all countries.</h3> -->
         <div class="FoundMessage__Container">
             <p class="FoundMessage__Title">We have found for you...</p>
             <p class="FoundMessage__Content" id="dynamicMessage"></p>
         </div>
-
     </header>
-
-
-
-
+    <div class="container">
+        <!-- Aquí se mostrarán los datos de los hoteles -->
+    </div>
     <script>
         flatpickr(".datepicker", {
             enableTime: false, // Deshabilitar la selección de tiempo
@@ -71,8 +66,6 @@
             // placeholder: "dd/mm/yyyy", // Placeholder para mostrar antes de seleccionar fecha
         });
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/date-fns@2.24.0/fns.min.js"></script>
-
 </body>
 
 </html>
