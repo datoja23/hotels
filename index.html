@@ -1,71 +1,83 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Book You Hotel</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='/css/main.css'>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="/css/main.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <script src='/src/index.js'></script>
-</head>
+    <script src="/src/index.js"></script>
+  </head>
 
-<body>
+  <body>
     <header>
-        <h1 class="title_header">BOOK YOUR HOTEL</h1>
-        <div class="filter_container">
-            <form class="Countries">
-                <select name="Countries" id="Countries">
-                    <option value="All Countries">--All Countries--</option>
-                    <option value="Argentina">Argentina</option>
-                    <option value="Brasil">Brasil</option>
-                    <option value="Chile">Chile</option>
-                    <option value="Uruguay">Uruguay</option>
-                </select>
-            </form>
-            <form class="date-start">
-                <input type="text" id="startDate" class="datepicker" data-input>
-            </form>
-            <form class="date-end">
-                <input type="text" id="endDate" class="datepicker" data-input data-range-input>
-            </form>
+      <h1 class="title_header">BOOK YOUR HOTEL</h1>
+      <div class="filter_container">
+        <form class="Countries">
+          <select name="Countries" id="Countries">
+            <option value="All Countries">--All Countries--</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Brasil">Brasil</option>
+            <option value="Chile">Chile</option>
+            <option value="Uruguay">Uruguay</option>
+          </select>
+        </form>
+        <form class="date-start">
+          <input type="text" id="startDate" class="datepicker" data-input />
+        </form>
+        <form class="date-end">
+          <input
+            type="text"
+            id="endDate"
+            class="datepicker"
+            data-input
+            data-range-input
+          />
+        </form>
 
-            <form class="price">
-                <select name="price" id="price">
-                    <option value="All Prices">--All Price--</option>
-                    <option value="1">$</option>
-                    <option value="2">$$</option>
-                    <option value="3">$$$</option>
-                    <option value="4">$$$$</option>
-                </select>
-            </form>
-            <form class="size">
-                <select name="size" id="size">
-                    <option value="All Sizes">--All Size--</option>
-                    <option value="Small">Small</option>
-                    <option value="Medium">Medium</option>
-                    <option value="Large">Large</option>
-                </select>
-            </form>
-            <button type="button" id="button">Clear</button>
-        </div>
-        <div class="FoundMessage__Container">
-            <p class="FoundMessage__Title">We have found for you...</p>
-            <p class="FoundMessage__Content" id="dynamicMessage"></p>
-        </div>
+        <form class="price">
+          <select name="price" id="price">
+            <option value="All Prices">--All Price--</option>
+            <option value="1">$</option>
+            <option value="2">$$</option>
+            <option value="3">$$$</option>
+            <option value="4">$$$$</option>
+          </select>
+        </form>
+        <form class="size">
+          <select name="size" id="size">
+            <option value="All Sizes">--All Size--</option>
+            <option value="Small">Small</option>
+            <option value="Medium">Medium</option>
+            <option value="Large">Large</option>
+          </select>
+        </form>
+        <button type="button" id="button">Clear</button>
+      </div>
+      <div class="FoundMessage__Container">
+        <p class="FoundMessage__Title">We have found for you...</p>
+        <p class="FoundMessage__Content" id="dynamicMessage"></p>
+      </div>
     </header>
     <div class="container">
-        <!-- Aquí se mostrarán los datos de los hoteles -->
+      <!-- Aquí se mostrarán los datos de los hoteles -->
     </div>
     <script>
-        flatpickr(".datepicker", {
-            enableTime: false, // Deshabilitar la selección de tiempo
-            dateFormat: "d/m/Y", // Formato de fecha: día/mes/año
-            // placeholder: "dd/mm/yyyy", // Placeholder para mostrar antes de seleccionar fecha
-        });
+      flatpickr(".datepicker", {
+        enableTime: false, // Deshabilitar la selección de tiempo
+        dateFormat: "d/m/Y", // Formato de fecha: día/mes/año
+        // placeholder: "dd/mm/yyyy", // Placeholder para mostrar antes de seleccionar fecha
+      });
     </script>
-</body>
-
+  </body>
 </html>
